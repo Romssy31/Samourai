@@ -3,9 +3,9 @@ package personnages;
 public class Humain {
 	private String nom;
 	private String boissonFav;
-	private int argent;
+	protected int argent;
 	private Humain[] memoire = new Humain[30];
-	private int nbConnaissance;
+	protected int nbConnaissance;
 
 	public Humain(String nom, String boisson, int argent) {
 		this.nom = nom;
@@ -89,7 +89,7 @@ public class Humain {
 	}
 
 	public void listerConnaissance() {
-		System.out.println(getNom() + " Je connais : ");
+		System.out.println(getNom() + " - " + "Je connais beaucoup de monde dont : ");
 		for (Humain connaissance : memoire) {
 			if (connaissance != null) {
 				System.out.println("- " + connaissance.getNom());
